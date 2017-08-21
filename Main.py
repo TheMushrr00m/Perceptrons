@@ -6,9 +6,9 @@ print('...')
 
 
 # In[1]: set weight1, weight2, and bias
-weight1 = 0.0
-weight2 = 0.0
-bias    = 0.0
+weight1 =  1.0
+weight2 =  1.0
+bias    = -1.1
 
 print('...')
 
@@ -34,9 +34,9 @@ print('...')
 
 # In[4]: Print the output
 num_wrong = len([output[4] for output in outputs if output[4] == 'No'])
-output_frame = pd.DataFrame(outputs, columns=['Input 1', '  Input 2', ' Linear Combination', '  Activation Output', '   Is Correct'])
+output_frame = pd.DataFrame(outputs, columns=['Input 1', '  Input 2', '  Linear Combination', '  Activation Output', '  Is Correct'])
 if not num_wrong:
-    print('Nice! You got it all correct.\n')
+    print('Nice!  You got it all correct.\n')
 else:
-    print('You got {} wrong.  Keep Trying!\n'.format(num_wrong))
-    print(output_frame.to_string(index=False))
+    print('You got {} wrong.  Keep trying!\n'.format(num_wrong))
+print(output_frame.to_string(index=False))
